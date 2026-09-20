@@ -1,0 +1,9 @@
+# Don't ship these to Vercel
+frontend/node_modules
+backend/.venv
+backend/__pycache__
+backend/app/**/__pycache__
+backend/*.db
+backend/.pytest_cache
+frontend/.env.local
+backend/.env

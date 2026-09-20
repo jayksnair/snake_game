@@ -1,0 +1,26 @@
+/* ─── Design tokens (Golden Ratio φ = 1.618) ─────────────────────────── */
+:root {
+  --phi: 1.6180339887;
+
+  /* Spacing (Fibonacci: 8, 13, 21, 34, 55, 89) */
+  --space-base: 8px;
+  --space-sm:   13px;
+  --space-md:   21px;
+  --space-lg:   34px;
+  --space-xl:   55px;
+  --space-xxl:  89px;
+
+  /* LCD palette */
+  --lcd-bg:         #A8B86A;
+  --lcd-primary:    #243B16;
+  --lcd-secondary:  #526A2A;
+  --lcd-bezel:      #1A1A0E;
+  --lcd-bezel-hi:   #2E2E1A;
+
+  /* Page */
+  --page-bg:        #0D0D08;
+
+  /* Bezel sizing */
+  --bezel-w:       clamp(6px, 1.5vmin, 18px);
+  --bezel-radius:  clamp(4px, 1vmin, 12px);
+}

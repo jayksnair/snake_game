@@ -1,0 +1,42 @@
+﻿# ─── Environment variables (never commit secrets) ────────────────────────────
+.env
+.env.local
+.env.*.local
+backend/.env
+
+# ─── Frontend ─────────────────────────────────────────────────────────────────
+frontend/.vite/
+
+# ─── Backend ──────────────────────────────────────────────────────────────────
+backend/.venv/
+backend/__pycache__/
+backend/**/__pycache__/
+*.pyc
+*.pyo
+backend/snake.db
+backend/.pytest_cache/
+backend/.coverage
+
+# ─── OS / Editor ──────────────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+*.swp
+.idea/
+.vscode/
+
+# ─── Logs ─────────────────────────────────────────────────────────────────────
+*.log
+npm-debug.log*
+
+# ─── Misc ─────────────────────────────────────────────────────────────────────
+*.tsbuildinfo
+
+# Build output (Vercel builds this from source)
+frontend/dist/
+
+# Stale tsc-compiled JS artifacts (TypeScript source only)
+frontend/src/**/*.js
+frontend/vite.config.js
+frontend/vite.config.d.ts
+# vite-env.d.ts is source — exclude only tsc-emitted declarations
+frontend/vite.config.d.ts

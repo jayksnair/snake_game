@@ -1,0 +1,50 @@
+/* ─── Global reset + app shell ────────────────────────────────────────── */
+@import './design-tokens.css';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html, body, #root {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: var(--page-bg);
+}
+
+/* Full-viewport app shell — LCD is centred */
+.app-shell {
+  width:  100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: var(--page-bg);
+  /* Subtle vignette */
+  background-image: radial-gradient(ellipse at 50% 50%, #1a1a10 0%, #0D0D08 80%);
+}
+
+/* Nokia branding area */
+.nokia-brand {
+  font-family: 'Arial Narrow', Arial, sans-serif;
+  font-weight: 900;
+  font-size: clamp(16px, 3vmin, 40px);
+  letter-spacing: 0.25em;
+  color: var(--lcd-bg);
+  text-transform: uppercase;
+  margin-bottom: clamp(var(--space-sm), 2vmin, var(--space-lg));
+  opacity: 0.85;
+  user-select: none;
+}
+
+/* Touch controls row (mobile only) */
+.touch-controls {
+  display: none;
+  margin-top: clamp(var(--space-sm), 2vmin, var(--space-md));
+}
+
+@media (hover: none) and (pointer: coarse) {
+  .touch-controls { display: flex; }
+}

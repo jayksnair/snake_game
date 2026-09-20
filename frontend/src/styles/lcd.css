@@ -1,0 +1,32 @@
+/* ─── LCD Frame + Canvas ──────────────────────────────────────────────── */
+
+/* Outer bezel — gives the physical LCD feel */
+.lcd-bezel {
+  background:    var(--lcd-bezel);
+  border-radius: var(--bezel-radius);
+  padding:       var(--bezel-w);
+  box-shadow:
+    inset 0 1px 2px rgba(255,255,255,0.06),
+    inset 0 -1px 2px rgba(0,0,0,0.5),
+    0 4px 24px rgba(0,0,0,0.8);
+}
+
+/* The canvas itself — fixed 84:48 ratio, fills available space */
+.lcd-canvas {
+  display:        block;
+  aspect-ratio:   84 / 48;   /* IMMUTABLE — 1.75:1 */
+  width:          100%;
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+  /* No border-radius on the game canvas */
+}
+
+/*
+ * Sizing wrapper — constrains available space for the canvas.
+ * Outer caller sets width/height via inline style from JS viewport calculation.
+ */
+.lcd-frame {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
